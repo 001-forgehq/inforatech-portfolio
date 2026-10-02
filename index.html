@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Infortech Systems - Enterprise software solutions for East African businesses and schools. Business Management System and School Management System delivered with reliability and local expertise.">
+  <title>Infortech Systems | Software Solutions for East Africa</title>
+
+  <!-- Preload fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Fonts - Interchange (display serif) and IBM Plex Sans (body) -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Skip link for accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Header / Navigation -->
+  <header role="banner">
+    <nav aria-label="Main navigation">
+      <div class="nav-container">
+        <a href="#" class="logo" aria-labelledby="logo-text">
+          <svg width="42" height="42" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+            <!-- Abstract building/architectural motif -->
+            <rect x="8" y="12" width="48" height="36" rx="2" stroke="currentColor" stroke-width="3"/>
+            <line x1="20" y1="12" x2="20" y2="52" stroke="currentColor" stroke-width="2.5" stroke-dasharray="4 4"/>
+            <line x1="28" y1="16" x2="28" y2="48" stroke="currentColor" stroke-width="2" stroke-opacity="0.6"/>
+            <line x1="36" y1="20" x2="36" y2="44" stroke="currentColor" stroke-width="1.5" stroke-opacity="0.4"/>
+            <line x1="44" y1="28" x2="44" y2="36" stroke="currentColor" stroke-width="1" stroke-opacity="0.3"/>
+          </svg>
+          <span id="logo-text">Infortech Systems</span>
+        </a>
+
+        <!-- Desktop menu -->
+        <ul class="nav-menu desktop-only" role="menubar">
+          <li role="none"><a href="#hero" role="menuitem">Home</a></li>
+          <li role="none"><a href="#projects" role="menuitem">Projects</a></li>
+          <li role="none"><a href="#process" role="menuitem">Process</a></li>
+          <li role="none"><a href="#about" role="menuitem">Why Infortech</a></li>
+          <li role="none"><a href="#contact" role="menuitem">Contact</a></li>
+        </ul>
+
+        <!-- Mobile menu toggle -->
+        <button
+          class="mobile-menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="nav-menu"
+          aria-label="Toggle navigation menu"
+        >
+          <span class="hamburger"></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content" role="main">
+
+    <!-- Hero Section -->
+    <section id="hero" aria-labelledby="hero-heading" class="offset-section">
+      <h1 id="hero-heading">
+        Reliable enterprise software for East African institutions
+      </h1>
+      <p class="lead">
+        We build and implement systems that solve real problems: business management platforms with inventory, accounting, and HR modules for SMEs; school administration tools with admissions, timetabling, and parent communication for educational institutions across Kenya, Uganda, Tanzania, Rwanda, and beyond. Our solutions have been deployed in over [PLACEHOLDER: number] facilities since inception.
+      </p>
+
+      <!-- Visual element - not a stock hero image -->
+      <div class="hero-visual" aria-hidden="true">
+        <svg viewBox="0 0 800 240" preserveAspectRatio="xMidYSlice slice" width="100%" height="160">
+          <!-- Abstract representation of system architecture -->
+          <defs>
+            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" style="stop-color:#F3910D;stop-opacity:1"/>
+              <stop offset="100%" style="stop-color:#F3910D;stop-opacity:0.3"/>
+            </linearGradient>
+          </defs>
+
+          <!-- Server rack columns -->
+          <rect x="40" y="20" width="70" height="200" rx="4" fill="#E8E6DF"/>
+          <rect x="120" y="20" width="70" height="200" rx="4" fill="#FAF9F6"/>
+          <rect x="200" y="20" width="70" height="200" rx="4" fill="#E8E6DF"/>
+          <rect x="280" y="20" width="70" height="200" rx="4" fill="#FAF9F6"/>
+
+          <!-- Connector lines -->
+          <line x1="110" y1="40" x2="130" y2="40" stroke="var(--color-primary)" stroke-width="3"/>
+          <line x1="190" y1="70" x2="210" y2="70" stroke="var(--color-primary)" stroke-width="2"/>
+          <line x1="270" y1="100" x2="290" y2="100" stroke="var(--color-primary)" stroke-opacity="0.6" stroke-width="1"/>
+
+          <!-- Status indicators -->
+          <circle cx="50" cy="40" r="6" fill="#2D7A4F"/>
+          <circle cx="50" cy="90" r="5" fill="#2D7A4F"/>
+          <circle cx="50" cy="140" r="4" fill="#2D7A4F"/>
+
+          <circle cx="130" cy="40" r="6" fill="#2D7A4F"/>
+          <circle cx="130" cy="90" r="5" fill="#2D7A4F"/>
+
+          <circle cx="210" cy="40" r="6" fill="#2D7A4F"/>
+          <circle cx="210" cy="90" r="5" fill="#2D7A4F"/>
+          <circle cx="210" cy="140" r="4" fill="#2D7A4F"/>
+
+          <circle cx="290" cy="40" r="6" fill="#2D7A4F"/>
+          <circle cx="290" cy="90" r="5" fill="#2D7A4F"/>
+        </svg>
+      </div>
+
+      <!-- CTA buttons -->
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">Explore our solutions</a>
+        <a href="#contact" class="btn btn-secondary">Get in touch</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Projects Section - offset layout -->
+  <section id="projects" aria-labelledby="projects-heading" class="projects-section">
+    <h2 id="projects-heading" class="visually-hidden">Our Software Solutions</h2>
+
+    <!-- Business Management System -->
+    <article class="project-block project-business">
+      <div class="project-header">
+        <svg width="56" height="56" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+          <rect x="8" y="12" width="48" height="36" rx="2" stroke="currentColor" stroke-width="3"/>
+          <rect x="16" y="20" width="8" height="8" fill="currentColor"/>
+          <rect x="40" y="20" width="8" height="8" fill="currentColor" opacity="0.7"/>
+          <rect x="16" y="32" width="8" height="8" fill="currentColor" opacity="0.5"/>
+        </svg>
+        <h3>Business Management System</h3>
+      </div>
+
+      <!-- Feature diagram instead of generic card -->
+      <div class="project-diagram" aria-label="Diagram showing Business Management System modules">
+        <div class="diagram-container">
+          <div class="system-overview">
+            <p><strong>Overview:</strong> An integrated ERP platform that consolidates operations across departments into a single source of truth.</p>
+
+            <!-- Module tabs as interactive elements -->
+            <div class="module-tabs" role="tablist" aria-label="System modules">
+              <button
+                class="tab-btn"
+                role="tab"
+                aria-selected="true"
+                aria-controls="module-content-inventory"
+                id="tab-inventory"
+              >
+                Inventory & POS
+              </button>
+
+              <button
+                class="tab-btn"
+                role="tab"
+                aria-selected="false"
+                aria-controls="module-content-accounting"
+                id="tab-accounting"
+              >
+                Accounting
+              </button>
+
+              <button
+                class="tab-btn"
+                role="tab"
+                aria-selected="false"
+                aria-controls="module-content-hr"
+                id="tab-hr"
+              >
+                HR & Payroll
+              </button>
+
+              <button
+                class="tab-btn"
+                role="tab"
+                aria-selected="false"
+                aria-controls="module-content-sales"
+                id="tab-sales"
+              >
+                Sales Orders
+              </button>
+            </div>
+
+            <!-- Tab content panels -->
+            <div class="tab-panel active" role="tabpanel" aria-labelledby="tab-inventory" id="module-content-inventory">
+              <dl class="feature-list">
+                <dt>Inventory Management</dt>
+                <dd>Multi-warehouse stock control with real-time tracking, batch expiry monitoring, and automated reorder alerts.</dd>
+
+                <dt>Point of Sale</dt>
+                <dd>Tailored POS terminals for retail outlets, barcode scanning, payment integration (M-Pesa, cards), receipt printing.</dd>
+
+                <dt>Purchase Orders</dt>
+                <dd>Vendor portal management, purchase requisition workflows, approval hierarchies aligned with company structure.</dd>
+              </dl>
+            </div>
+
+            <div class="tab-panel" role="tabpanel" aria-labelledby="tab-accounting" id="module-content-accounting">
+              <dl class="feature-list">
+                <dt>General Ledger</dt>
+                <dd>Double-entry bookkeeping, customizable chart of accounts, reconciliation tools for bank imports.</dd>
+
+                <dt>Invoicing & Billing</dt>
+                <dd>Template-based invoice creation, multi-currency support, payment terms, overdue tracking with automated reminders.</dd>
+
+                <dt>Financial Reports</dt>
+                <dd>P&L statements, balance sheets, cash flow analysis, department cost centers, tax compliance (KRA filing ready).</dd>
+              </dl>
+            </div>
+
+            <div class="tab-panel" role="tabpanel" aria-labelledby="tab-hr" id="module-content-hr">
+              <dl class="feature-list">
+                <dt>Employee Records</dt>
+                <dd>Digital staff files, contract management, leave tracking, attendance integration, skills inventory.</dd>
+
+                <dt>Payroll Processing</dt>
+                <dd>Salary calculations with statutory deductions (NSSF, NHIF), payslip generation, bonus/allowance configuration.</dd>
+
+                <dt>Access Management</dt>
+                <dd>Role-based permissions, department-level access control, audit trails for sensitive operations.</dd>
+              </dl>
+            </div>
+
+            <div class="tab-panel" role="tabpanel" aria-labelledby="tab-sales" id="module-content-sales">
+              <dl class="feature-list">
+                <dt>Sales Orders</dt>
+                <dd>Order-to-cash workflows, customer credit limits, order consolidation, delivery scheduling.</dd>
+
+                <dt>Customer Portal</dt>
+                <dd>Self-service order tracking, invoice downloads, payment links, complaint registration.</dd>
+
+                <dt>Dashboard Analytics</dt>
+                <dd>Real-time KPI widgets: sales by region, inventory turnover, receivables aging, profit margins per product line.</dd>
+              </dl>
+            </div>
+
+            <div class="tab-panel" role="tabpanel" aria-labelledby="tab-inventory" id="module-content-core">
+              <p><strong>Additional capabilities:</strong></p>
+              <ul>
+                <li>Multi-company support for regional headquarters structures</li>
+                <li>Data migration from legacy systems (SAP, Oracle, QuickBooks)</li>
+                <li>API integrations with e-commerce platforms and logistics providers</li>
+                <li>[PLACEHOLDER: cloud hosting options / on-premise deployment]</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Target audience -->
+      <p class="project-target">
+        <strong>Built for:</strong> [PLACEHOLDER: target market - e.g., manufacturing firms, distribution companies, retail chains] with 10-500 employees.
+      </p>
+
+      <a href="#contact" class="btn btn-outline">Request a demonstration</a>
+    </article>
+
+    <!-- Spacer / Visual break -->
+    <div class="spacer-section" aria-hidden="true">
+      <div class="spacer-fill"></div>
+    </div>
+
+    <!-- School Management System -->
+    <article class="project-block project-school">
+      <div class="project-header">
+        <svg width="56" height="56" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+          <path d="M20 12h24l2 8H18z" stroke="currentColor" stroke-width="3"/>
+          <rect x="20" y="24" width="24" height="16" rx="1" stroke="currentColor" stroke-width="2.5"/>
+          <line x1="28" y1="24" x2="28" y2="36" stroke="currentColor" stroke-width="1"/>
+          <line x1="36" y1="24" x2="36" y2="36" stroke="currentColor" stroke-width="1"/>
+          <rect x="20" y="44" width="8" height="6" rx="1" fill="currentColor"/>
+          <rect x="36" y="44" width="8" height="6" rx="1" fill="currentColor"/>
+        </svg>
+        <h3>School Management System</h3>
+      </div>
+
+      <!-- Feature diagram -->
+      <div class="project-diagram" aria-label="Diagram showing School Management System ecosystem">
+        <div class="diagram-container">
+          <p><strong>The Ecosystem:</strong> A unified platform connecting students, staff, parents, and administrators across admissions to graduation.</p>
+
+          <!-- Role-based access diagram -->
+          <ul class="access-diagram" role="list">
+            <li class="role-student">
+              <span class="role-label">Student</span>
+              <span class="role-view">LMS access, grades view, attendance tracking, library borrowing, fee payment portal</span>
+            </li>
+
+            <li class="role-parent">
+              <span class="role-label">Parent/Guardian</span>
+              <span class="role-view">Parent portal: student progress reports, communication feed, event calendar, attendance alerts, expense tracking</span>
+            </li>
+
+            <li class="role-staff">
+              <span class="role-label">Teaching Staff</span>
+              <span class="role-view">Lesson planning tools, gradebook, exam management, student performance analytics</span>
+            </li>
+
+            <li class="role-admin">
+              <span class="role-label">Administration</span>
+              <span class="role-view">System-wide oversight: admissions pipeline, resource allocation, compliance reporting, financial oversight</span>
+            </li>
+          </ul>
+
+          <!-- Feature grid using CSS Grid -->
+          <div class="feature-grid">
+            <div class="grid-item">
+              <h4>Admissions Pipeline</h4>
+              <p>Online application forms, document collection (KRA PIN verified), interview scheduling, admission offers with e-signature integration.</p>
+            </div>
+
+            <div class="grid-item">
+              <h4>Student Records</h4>
+              <p>Permanent records with document versioning, transfer certificates generation, alumni relations portal.</p>
+            </div>
+
+            <div class="grid-item">
+              <h4>Timetabling Engine</h4>
+              <p>Auto-generate schedules respecting room capacities, teacher availability, and subject prerequisites. Export to mobile apps.</p>
+            </div>
+
+            <div class="grid-item">
+              <h4>Exam & Report Cards</h4>
+              <p>Marks entry with custom grading schemes, gradebook auto-calculation, standardized report card templates per Kenyan curriculum.</p>
+            </div>
+
+            <div class="grid-item">
+              <h4>SMS Notifications</h4>
+              <p>WhatsApp Business API integration for attendance alerts, fee reminders, event notifications. Bulk SMS with delivery tracking.</p>
+            </div>
+
+            <div class="grid-item">
+              <h4>Fees Management</h4>
+              <p>Billing cycles, installment plans, late fee calculations, payment reconciliation (M-Pesa STK push), financial reporting.</p>
+            </div>
+
+            <div class="grid-item">
+              <h4>Library System</h4>
+              <p>Cataloging (compatible with MARC standards), circulation tracking, fine management, digital resource integration.</p>
+            </div>
+
+            <div class="grid-item">
+              <h4>Sports & Activities</h4>
+              <p>Team registration, match scheduling, score tracking, certification of participation.</p>
+            </div>
+          </div>
+
+          <p><strong>Curriculum alignment:</strong> Configured for the [PLACEHOLDER: specific curriculum - e.g., Kenyan CBC or 8-4-4 system].</p>
+        </div>
+      </div>
+
+      <!-- Target audience -->
+      <p class="project-target">
+        <strong>Built for:</strong> Private and public schools, colleges, boarding facilities across East Africa with [PLACEHOLDER: capacity range] students.
+      </p>
+
+      <a href="#contact" class="btn btn-outline">Schedule a walkthrough</a>
+    </article>
+
+  </section>
+
+  <!-- How We Work Section -->
+  <section id="process" aria-labelledby="process-heading" class="process-section">
+    <h2 id="process-heading">Our Implementation Process</h2>
+
+    <!-- Process steps using horizontal timeline on desktop, stacked on mobile -->
+    <ol class="process-steps">
+      <li class="process-step">
+        <div class="step-marker">01</div>
+        <div class="step-content">
+          <h3>Discovery & Requirements Mapping</h3>
+          <p>We visit your facilities (or conduct virtual workshops) to understand your workflows. We document your current processes, pain points, and integration needs. This phase typically takes [PLACEHOLDER: 3-5 days] for Business Systems or [PLACEHOLDER: 1-2 weeks] for schools with multiple campuses.</p>
+        </div>
+      </li>
+
+      <li class="process-step">
+        <div class="step-marker">02</div>
+        <div class="step-content">
+          <h3>Configuration & Customization</h3>
+          <p>We adapt our standard platform to your needs: custom fields, approval workflows, chart of accounts structures (for ERP), or curriculum mappings. Minimal customization means faster deployment and lower upgrade costs down the line.</p>
+        </div>
+      </li>
+
+      <li class="process-step">
+        <div class="step-marker">03</div>
+        <div class="step-content">
+          <h3>Data Migration & Integration</h3>
+          <p>We migrate your existing data with validation reports, reconcile discrepancies before go-live, and integrate with third-party systems: banking APIs, M-Pesa Daraja, email servers (Microsoft 365, Google Workspace), and legacy hardware (barcode scanners, biometric attendance machines).</p>
+        </div>
+      </li>
+
+      <li class="process-step">
+        <div class="step-marker">04</div>
+        <div class="step-content">
+          <h3>User Training & Go-Live Support</h3>
+          <p>We conduct hands-on training sessions for all user groups: administrators, staff members, cashiers, and students. Role-specific quick reference guides accompany the sessions. We provide hypercare support during the first [PLACEHOLDER: 4-8] weeks after go-live.</p>
+        </div>
+      </li>
+
+      <li class="process-step">
+        <div class="step-marker">05</div>
+        <div class="step-content">
+          <h3>Post-Implementation Optimization</h3>
+          <p>Three months after launch, we review system utilization and recommend enhancements. We help you configure new modules or departments as your business grows.</p>
+        </div>
+      </li>
+    </ol>
+
+    <p class="process-contact">
+      Ready to discuss your project? <a href="#contact" aria-label="Contact us for implementation discussions">Schedule an initial consultation</a>.
+    </p>
+  </section>
+
+  <!-- Why Infortech Section -->
+  <section id="about" aria-labelledby="about-heading" class="why-section">
+    <h2 id="about-heading">Why Infortech Systems</h2>
+
+    <!-- Values as a technical spec sheet style table -->
+    <table class="values-table" role="region" aria-label="Company values and differentiators">
+      <caption>What distinguishes our implementation approach</caption>
+
+      <thead>
+        <tr>
+          <th scope="col">Capability</th>
+          <th scope="col">Our Standard</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td><strong>Local presence</strong></td>
+          <td>Headquartered in Nairobi with support engineers available for same-day response. We understand local regulations: KRA tax compliance, data privacy under the Kenya Data Protection Act, and industry-specific standards.</td>
+        </tr>
+
+        <tr>
+          <td><strong>Deployment speed</strong></td>
+          <td>BMS implementations in [PLACEHOLDER: 2-4 weeks], School MS within [PLACEHOLDER: 1-3 months] for multi-campus deployments. We deliver working software first, then enhance.</td>
+        </tr>
+
+        <tr>
+          <td><strong>Total cost of ownership</strong></td>
+          <td>No surprise license fees or per-user charges on core modules. What you see in the proposal is what you pay. Optional premium services are clearly marked separately.</td>
+        </tr>
+
+        <tr>
+          <td><strong>Documentation quality</strong></td>
+          <td>We provide user guides, administrator manuals, and API documentation before go-live. Knowledge transfers happen alongside implementation, not months later as a separate charge.</td>
+        </tr>
+
+        <tr>
+          <td><strong>Training methodology</strong></td>
+          <td>We train based on actual use cases from your industry, not generic tutorials. Each module gets a dedicated session with role-based scenarios relevant to your daily work.</td>
+        </tr>
+
+        <tr>
+          <td><strong>Ongoing support</strong></td>
+          <td>Dedicated account manager after go-live. Tier 1 support via phone and WhatsApp Business for non-technical users. Escalation paths defined in the SLA before signing.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Mission statement -->
+    <blockquote class="mission-statement">
+      <p>"To equip East African institutions and businesses with enterprise-grade software that operates reliably, integrates seamlessly with local payment and communication systems, and evolves with their growth — without the complexity or cost of global vendors."</p>
+      <footer>[PLACEHOLDER: CEO/Founder name] | Infortech Systems</footer>
+    </blockquote>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" aria-labelledby="contact-heading" class="contact-section">
+    <h2 id="contact-heading">Get in Touch</h2>
+
+    <form id="contact-form" class="contact-form" action="#" method="post" novalidate>
+      <!-- Success/error message -->
+      <div class="form-message" role="status" aria-live="polite" hidden>
+        <div class="message-success">
+          <strong>Message received!</strong> We'll get back to you within [PLACEHOLDER: 24-48 hours] or the timeframe specified in your case.
+        </div>
+        <div class="message-error" hidden>
+          Please correct the errors above and try again.
+        </div>
+      </div>
+
+      <!-- Form fields -->
+      <fieldset class="form-fieldset">
+        <legend>Your Information</legend>
+
+        <div class="form-group">
+          <label for="name">Full name <span aria-hidden="true">*</span><span class="sr-only">(required)</span></label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            minlength="2"
+            autocomplete="name"
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email address <span aria-hidden="true">*</span><span class="sr-only">(required)</span></label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            autocomplete="email"
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone number <span aria-hidden="true">*</span><span class="sr-only">(required)</span></label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            required
+            autocomplete="tel"
+            pattern="[0-9+\-\s()]{10,20}"
+            title="Enter phone number with optional spaces and brackets"
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="company">Company/Organization <span aria-hidden="true">*</span><span class="sr-only">(required)</span></label>
+          <input
+            type="text"
+            id="company"
+            name="company"
+            required
+            autocomplete="organization"
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="interest">I'm interested in</label>
+          <select id="interest" name="interest">
+            <option value="">Select an interest...</option>
+            <option value="bms">Business Management System</option>
+            <option value="sms">School Management System</option>
+            <option value="both">Both systems</option>
+            <option value="other">Other inquiry</option>
+          </select>
+        </div>
+      </fieldset>
+
+      <fieldset class="form-fieldset">
+        <legend>Message</legend>
+
+        <div class="form-group">
+          <label for="message">How can we help you?</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="5"
+            placeholder="Describe your organization's needs, timeline, or specific questions..."
+            maxlength="3000"
+          ></textarea>
+          <span class="form-character-count">[PLACEHOLDER: Character count]</span>
+        </div>
+      </fieldset>
+
+      <!-- Submit button -->
+      <button type="submit" class="btn btn-primary btn-block">Send message</button>
+    </form>
+
+    <!-- Alternative contact methods -->
+    <div class="alternative-contact" aria-labelledby="alt-contact-heading">
+      <h3 id="alt-contact-heading" class="visually-hidden">Alternative ways to reach us</h3>
+
+      <address class="address">
+        <p><strong>By phone:</strong> [PLACEHOLDER: phone number]</p>
+        <p><strong>WhatsApp Business:</strong> <a href="[PLACEHOLDER: whatsapp link]" target="_blank" rel="noopener noreferrer">[PLACEHOLDER: WhatsApp link]</a></p>
+        <p><strong>Email:</strong> <a href="mailto:[PLACEHOLDER: email]">[PLACEHOLDER: email address]</a></p>
+        <p><strong>Office address:</strong> [PLACEHOLDER: full physical address]</p>
+      </address>
+
+      <p class="business-hours">
+        Business hours: Monday - Friday, [PLACEHOLDER: 8:00 AM - 5:30 PM East Africa Time]. We respond to emails within [PLACEHOLDER: 24-48] hours.
+      </p>
+    </div>
+
+    <!-- Privacy notice -->
+    <p class="privacy-notice">
+      We'll never share your information with third parties. Your data is protected under our privacy policy and the Kenya Data Protection Act. [PLACEHOLDER: link to privacy policy]
+    </p>
+  </section>
+
+  <!-- Footer -->
+  <footer role="contentinfo">
+    <div class="footer-container">
+      <div class="footer-primary">
+        <h4>Infortech Systems</h4>
+        <p>[PLACEHOLDER: Brief company tagline or mission statement]</p>
+      </div>
+
+      <nav aria-labelledby="footer-nav-heading" class="footer-links">
+        <h5 id="footer-nav-heading" class="visually-hidden">Footer navigation</h5>
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#process">Implementation Process</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-social">
+        <h5 class="visually-hidden">Connect with us</h5>
+        <p>[PLACEHOLDER: Social media links / LinkedIn profile]</p>
+      </div>
+
+      <div class="footer-legal">
+        <p>&copy; [PLACEHOLDER: current year] Infortech Systems. All rights reserved.</p>
+        <p><a href="[PLACEHOLDER: terms link]" aria-label="Terms of service">Terms</a> | <a href="[PLACEHOLDER: privacy link]" aria-label="Privacy policy">Privacy</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript application -->
+  <script src="app.js" defer></script>
+</body>
+</html>
