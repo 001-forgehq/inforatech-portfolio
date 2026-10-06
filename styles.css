@@ -82,17 +82,7 @@
 
 html {
   scroll-behavior: smooth;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-  *, *::before, *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-  }
+  overflow-x: clip;
 }
 
 body {
@@ -104,6 +94,13 @@ body {
   background-color: var(--color-bg);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  max-width: min(100% - 2rem, 72rem);
+  margin-inline: auto;
+}
+
+/* Layout contract - apply to all elements */
+body * {
+  word-wrap: break-word;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -113,6 +110,7 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--color-accent);
   margin-top: var(--space-xl);
   margin-bottom: var(--space-md);
+  text-wrap: balance;
 }
 
 h1 {
@@ -125,6 +123,10 @@ h2 {
 
 h3 {
   font-size: var(--text-medium);
+}
+
+p, li {
+  max-width: 65ch;
 }
 
 p {
@@ -334,6 +336,11 @@ main {
   flex-direction: column;
 }
 
+/* Layout contract: all sections use consistent padding */
+section {
+  padding-block: clamp(4rem, 8vw, 7rem);
+}
+
 .offset-section {
   margin-inline-start: calc(var(--space-md) * -1);
   padding-inline-start: var(--space-md);
@@ -341,17 +348,26 @@ main {
   border-block-end: 1px solid rgba(42, 52, 62, 0.1);
 }
 
-/* Break offset sections back on screen */
+/* Alternate section layouts for visual rhythm */
+#hero {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-xl);
+  align-items: center;
+}
 
 @media (min-width: 769px) {
-  .offset-section:first-child {
-    margin-inline-start: calc(var(--space-md) * -1.5);
+  #hero {
+    grid-template-columns: 2fr 1fr;
   }
+}
 
-  .spacer-section {
-    padding-block-end: calc(var(--space-md) * -1);
-  }
+.spacer-section {
+  display: flex;
+  padding-block-end: clamp(4rem, 8vw, 7rem);
+}
 
+@media (min-width: 769px) {
   .why-section,
   .contact-section {
     margin-inline-start: calc(var(--space-md) * -1);
@@ -361,11 +377,12 @@ main {
 /* Hero Section */
 
 #hero h1 {
-  margin-top: var(--space-3xl);
-  margin-bottom: var(--space-lg);
+  margin-top: var(--space-xl);
+  margin-bottom: var(--space-md);
 }
 
-.lead {
+/* Hero content grid */
+#hero p:first-child {
   font-size: var(--text-body);
   max-width: 65ch;
   color: var(--color-text-muted);
@@ -457,19 +474,14 @@ main {
 
 .projects-section {
   background-color: var(--color-bg);
-  padding-block: var(--space-2xl);
+  padding-block: clamp(4rem, 8vw, 7rem);
 }
 
 .project-block {
-  margin-bottom: var(--space-2xl);
-  padding-inline-end: calc(var(--space-md) * -1);
-  min-width: max-content; /* Allow diagram to push beyond container */
-}
-
-@media (min-width: 1025px) {
-  .project-block {
-    padding-inline-end: var(--space-md);
-  }
+  margin-bottom: clamp(4rem, 6vw, 5rem);
+  position: relative;
+  padding-inline-end: 0; /* Container handles margins */
+  min-width: 100%; /* No diagram pushout - use proper grid layouts instead */
 }
 
 .project-header {
