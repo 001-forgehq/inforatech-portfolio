@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Infortech Systems Portfolio - Styles
+   InforaTech Systems Portfolio - Styles
    Author: Design system generated with deliberate constraints
    ========================================================================== */
 
@@ -387,6 +387,14 @@ section {
   #hero .hero-visual { grid-area: visual; }
 }
 
+.hero-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-xl);
+  display: block;
+}
+
 .spacer-section {
   display: flex;
   padding-block-end: clamp(4rem, 8vw, 7rem);
@@ -746,7 +754,7 @@ section {
 }
 
 /* ==========================================================================
-   Why Infortech Section - Table Style Layout
+   Why InforaTech Section - Table Style Layout
    ========================================================================== */
 
 .why-section {
@@ -759,6 +767,14 @@ section {
   font-size: 1rem;
   color: var(--color-text-muted);
   margin-bottom: var(--space-md);
+}
+
+.table-description {
+  text-align: left;
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-md);
+  font-weight: 500;
 }
 
 .values-table {
@@ -1126,16 +1142,15 @@ body > footer {
     padding-inline-start: calc(var(--space-md) * -1);
   }
 
-  /* Process timeline becomes horizontal on larger breakpoints */
+  /* Process timeline layout on larger breakpoints */
   .process-steps {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: var(--space-xl);
   }
 
   .process-step {
-    flex: 1;
-    min-width: 240px;
+    padding-inline-start: 0;
   }
 
 

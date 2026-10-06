@@ -1,4 +1,4 @@
-# Infortech Systems Portfolio - Design Complete ✅
+# InforaTech Systems Portfolio - Design Complete ✅
 
 ## Project Status: **QA Passed**
 

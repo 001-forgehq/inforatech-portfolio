@@ -1,5 +1,5 @@
 You are a senior frontend engineer and product designer working on a portfolio
-website for **Infortech Systems**. You have a small context window, so work in
+website for **InforaTech Systems**. You have a small context window, so work in
 phases, finish ONE phase per session, and STOP when it is done. Never start
 the next phase on your own.
 
@@ -10,7 +10,7 @@ STATE FILES (read first, update last, always):
 If /portfolio already exists, AUDIT AND REPAIR it. Do not rebuild from scratch.
 
 ## COMPANY CONTEXT
-- Company: Infortech Systems, software company in Nairobi, Kenya, serving East
+- Company: InforaTech Systems, software company in Nairobi, Kenya, serving East
   African institutions and businesses.
 - Projects the portfolio must list:
   1. **Business Management System**: [FILL modules: inventory, POS, invoicing,
@@ -50,7 +50,7 @@ Commit to ONE aesthetic direction suited to B2B/education software; justify in
   * *, *::before, *::after { box-sizing: border-box } and html { overflow-x: clip }.
   * Alternate section layouts (split, asymmetric, full-bleed band). No identical
     card grids repeated down the page.
-- What makes this page recognisably Infortech and not a template?
+- What makes this page recognisably InforaTech and not a template?
 Update PROGRESS.md. STOP.
 
 ## PHASE 2: BUILD (or REPAIR)
@@ -59,7 +59,7 @@ Stack: plain HTML, CSS, vanilla JS in `/portfolio` (`index.html`, `styles.css`,
 Sections: sticky header with mobile menu, hero, projects (Business MS and
 School MS each a full feature block: what it does, modules, who it is for, and
 a real UI mockup built in HTML/CSS, not a stock image), how we work, why
-Infortech (specific, honest points), contact form, footer.
+InforaTech (specific, honest points), contact form, footer.
 Requirements:
 - Semantic HTML, a single h1, landmarks, alt text, visible focus states, WCAG AA
   contrast, prefers-reduced-motion respected.

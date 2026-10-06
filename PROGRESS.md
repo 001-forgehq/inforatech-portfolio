@@ -1,4 +1,4 @@
-# Portfolio Build Progress - Infortech Systems
+# Portfolio Build Progress - InforaTech Systems
 
 ## Phase 0: Skills & Tools ✅
 - [x] Read `frontend-design` skill documentation (SKILL.md)
@@ -23,7 +23,7 @@
   - [x] Hero section (concrete copy about East African institutions)
   - [x] Projects section (Business MS + School MS feature blocks)
   - [x] How we work / implementation process (5-step timeline)
-  - [x] Why Infortech (values table, mission statement)
+  - [x] Why InforaTech (values table, mission statement)
   - [x] Contact form (client-side validation)
   - [x] Footer with legal links
 - [x] Accessibility: semantic HTML, landmarks, focus states, reduced motion

@@ -1,5 +1,5 @@
 /**
- * Infortech Systems Portfolio - Application JavaScript
+ * InforaTech Systems Portfolio - Application JavaScript
  * Handles: mobile menu, tabs, form validation, scroll animations
  */
 
