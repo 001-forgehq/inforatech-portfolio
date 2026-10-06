@@ -207,7 +207,8 @@ button, input, select, textarea {
 header {
   position: sticky;
   top: 0;
-  background-color: var(--color-bg);
+  background-color: rgba(250, 249, 246, 0.95);
+  backdrop-filter: blur(8px);
   border-bottom: 1px solid rgba(42, 52, 62, 0.1);
   z-index: var(--z-sticky);
 }
@@ -245,11 +246,25 @@ header {
 /* Desktop Navigation */
 
 .nav-menu {
-  display: flex;
+  display: none;
   list-style: none;
   margin: 0;
   padding: 0;
   gap: var(--space-lg);
+}
+
+.nav-menu.is-open {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: var(--color-bg);
+  padding: var(--space-md);
+  box-shadow: var(--shadow-card);
+  border-bottom: 1px solid rgba(42, 52, 62, 0.1);
+  z-index: var(--z-dropdown);
 }
 
 .nav-menu a {
@@ -272,7 +287,9 @@ header {
 /* Mobile Menu Toggle */
 
 .mobile-menu-toggle {
-  display: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
   width: 44px;
   height: 44px;
@@ -358,8 +375,16 @@ section {
 
 @media (min-width: 769px) {
   #hero {
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 3fr 2fr;
+    grid-template-areas:
+      "heading visual"
+      "lead visual"
+      "actions visual";
   }
+  #hero h1 { grid-area: heading; }
+  #hero .lead { grid-area: lead; }
+  #hero .hero-actions { grid-area: actions; }
+  #hero .hero-visual { grid-area: visual; }
 }
 
 .spacer-section {
@@ -401,9 +426,16 @@ section {
 
 .hero-actions {
   display: flex;
+  flex-direction: column;
   gap: var(--space-md);
   justify-content: center;
   padding-block-start: var(--space-xl);
+}
+
+@media (min-width: 481px) {
+  .hero-actions {
+    flex-direction: row;
+  }
 }
 
 /* ==========================================================================
@@ -623,14 +655,20 @@ section {
 
 .feature-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
   gap: var(--space-md);
   margin-bottom: var(--space-lg);
 }
 
+@media (min-width: 481px) {
+  .feature-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @supports (grid-template-rows: subgrid) {
   .feature-grid {
-    grid-template-columns: 1fr 1fr;
+    /* Optional subgrid support */
   }
 }
 
@@ -670,13 +708,14 @@ section {
 
 .process-step {
   position: relative;
-  padding-inline-start: calc(var(--space-2xl) + var(--space-sm));
+  display: flex;
+  flex-direction: column;
+  padding-inline-start: 0;
 }
 
 .step-marker {
-  position: absolute;
-  inset-block-start: calc(var(--space-lg) * -1);
-  left: 0;
+  position: relative;
+  margin-bottom: var(--space-md);
   width: 44px;
   height: 44px;
   display: flex;
@@ -687,7 +726,6 @@ section {
   font-family: "Interchange", serif;
   font-size: 1.25rem;
   border-radius: var(--radius-full);
-  border: 4px solid rgba(250, 249, 246, 1); /* Creates gap effect */
 }
 
 .step-content h3 {
@@ -725,10 +763,10 @@ section {
 
 .values-table {
   width: 100%;
-  max-width: 85ch;
   border-collapse: collapse;
   background-color: #FFFFFF;
   border: 1px solid rgba(42, 52, 62, 0.1);
+  margin: 0 auto;
 }
 
 .values-table th, .values-table td {
@@ -750,6 +788,26 @@ section {
 .values-table td {
   font-size: 0.9375rem;
   color: var(--color-text-muted);
+}
+
+@media (max-width: 768px) {
+  .values-table, .values-table tbody, .values-table tr, .values-table td, .values-table th {
+    display: block;
+    width: 100%;
+  }
+  .values-table thead {
+    display: none;
+  }
+  .values-table td {
+    padding: var(--space-md);
+  }
+  .values-table td:first-child {
+    font-weight: 600;
+    color: var(--color-accent);
+    background-color: rgba(42, 52, 62, 0.04);
+    border-bottom: none;
+    padding-bottom: var(--space-xs);
+  }
 }
 
 .values-table tr:last-child td, .values-table tr:nth-last-of-type(2) td {
@@ -774,6 +832,8 @@ section {
   margin-top: var(--space-md);
   font-size: 0.875rem;
   color: var(--color-text-muted);
+  background-color: transparent;
+  padding: 0;
 }
 
 /* ==========================================================================
@@ -890,14 +950,18 @@ section {
 }
 
 .alternative-contact {
-  padding-block-start: var(--space-xl);
-  margin-top: var(--space-lg);
+  padding-block-start: 0;
+  margin-top: 0;
+  background-color: rgba(42, 52, 62, 0.03);
+  padding: var(--space-xl);
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(42, 52, 62, 0.1);
 }
 
 .address {
   font-family: inherit;
   font-style: normal;
-  color: var(--color-text-muted);
+  color: var(--color-text);
 }
 
 .address p {
@@ -907,6 +971,9 @@ section {
 .business-hours {
   font-size: 0.875rem;
   color: var(--color-text-muted);
+  margin-top: var(--space-lg);
+  border-top: 1px solid rgba(42, 52, 62, 0.1);
+  padding-top: var(--space-md);
 }
 
 .address a {
@@ -926,7 +993,7 @@ section {
    Footer
    ========================================================================== */
 
-footer {
+body > footer {
   background-color: #1A1F27;
   padding-block: var(--space-xl);
   color: #BDBEC3;
@@ -1035,6 +1102,16 @@ footer {
 
 @media (min-width: 769px) {
   /* Header becomes horizontal */
+  .nav-menu {
+    display: flex;
+    position: static;
+    flex-direction: row;
+    width: auto;
+    background: transparent;
+    padding: 0;
+    box-shadow: none;
+    border: none;
+  }
 
   .mobile-menu-toggle {
     display: none; /* Hide hamburger on desktop */
@@ -1061,11 +1138,6 @@ footer {
     min-width: 240px;
   }
 
-  .step-marker {
-    top: auto;
-    left: auto;
-    bottom: calc(var(--space-xl) + var(--space-lg));
-  }
 
   .step-content {
     padding-block-start: var(--space-md);
@@ -1083,10 +1155,21 @@ footer {
     grid-template-columns: repeat(4, 1fr);
   }
 
-  .contact-form {
-    max-width: 60ch;
-    margin-left: auto;
+  .contact-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "heading heading"
+      "alt form"
+      "notice form";
+    gap: var(--space-2xl);
+    align-items: start;
   }
+  
+  #contact-heading { grid-area: heading; }
+  .contact-form { grid-area: form; margin-left: 0; max-width: 100%; }
+  .alternative-contact { grid-area: alt; margin-top: 0; }
+  .privacy-notice { grid-area: notice; }
 
   .project-block {
     padding-inline-start: 0;

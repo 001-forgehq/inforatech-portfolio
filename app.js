@@ -11,7 +11,7 @@
   // ==========================================================================
   const elements = {
     navToggle: document.querySelector('.mobile-menu-toggle'),
-    navMenu: document.getElementById('nav-menu'),
+    navMenu: document.querySelector('.nav-menu'),
     contactForm: document.getElementById('contact-form'),
     tabs: document.querySelectorAll('.tab-btn'),
     tabPanels: document.querySelectorAll('.tab-panel'),
@@ -62,7 +62,13 @@
         elements.navMenu.style.animation = 'none';
         elements.navMenu.offsetHeight; /* trigger reflow */
         elements.navMenu.style.animation = 'slideUp 0.3s var(--ease-out)';
+        setTimeout(() => {
+          if (elements.navToggle.getAttribute('aria-expanded') === 'false') {
+            elements.navMenu.classList.remove('is-open');
+          }
+        }, 280);
       } else {
+        elements.navMenu.classList.add('is-open');
         elements.navMenu.style.animation = 'slideDown 0.3s var(--ease-out)';
       }
 
@@ -77,6 +83,7 @@
         if (!prefersReducedMotion && e.target.closest('.desktop-only')) {
           elements.navToggle.setAttribute('aria-expanded', 'false');
           elements.navMenu.style.animation = 'slideUp 0.3s var(--ease-out)';
+          setTimeout(() => elements.navMenu.classList.remove('is-open'), 280);
           document.body.style.overflowHidden = '';
         }
       });
@@ -89,6 +96,7 @@
         if (menuOpen) {
           elements.navToggle.setAttribute('aria-expanded', 'false');
           elements.navMenu.style.animation = 'slideUp 0.3s var(--ease-out)';
+          setTimeout(() => elements.navMenu.classList.remove('is-open'), 280);
           document.body.style.overflowHidden = '';
         }
       }
@@ -99,21 +107,14 @@
    * Keyframe definitions for mobile menu animation
    */
   const styleSheet = new CSSStyleSheet();
-  styleSheet.insertRule(`
-    @keyframes slideDown {
-      from { opacity: 0; transform: translateY(-10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes slideUp {
-      from { opacity: 1; transform: translateY(0); }
-      to { opacity: 0; transform: translateY(-10px); }
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(8px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-  `, false);
-  document.adoptedStyleSheets = [styleSheet];
+  try {
+    styleSheet.insertRule('@keyframes slideDown { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }', 0);
+    styleSheet.insertRule('@keyframes slideUp { from { opacity: 1; transform: translateY(0); } to { opacity: 0; transform: translateY(-10px); } }', 1);
+    styleSheet.insertRule('@keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }', 2);
+    document.adoptedStyleSheets = [...document.adoptedStyleSheets, styleSheet];
+  } catch (e) {
+    console.error('Error inserting animation rules', e);
+  }
 
   // ==========================================================================
   // Tab Navigation (Business MS modules)
